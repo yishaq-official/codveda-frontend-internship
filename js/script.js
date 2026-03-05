@@ -1,19 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. Mobile Menu Toggle ---
+    
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
     const navLinksItems = document.querySelectorAll('.nav-link');
 
     mobileMenu.addEventListener('click', () => {
-        // Toggle mobile menu visibility
         navLinks.classList.toggle('active');
         
-        // Hamburger animation (optional simple toggle)
         mobileMenu.classList.toggle('is-active');
     });
-
-    // Close mobile menu when a link is clicked
     navLinksItems.forEach(item => {
         item.addEventListener('click', () => {
             navLinks.classList.remove('active');
@@ -21,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. Navbar Background Change on Scroll ---
     const navbar = document.getElementById('navbar');
 
     window.addEventListener('scroll', () => {
@@ -31,13 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
-
-    // --- 3. Scroll Reveal Animation ---
-    // Using Intersection Observer for better performance
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealOptions = {
-        threshold: 0.15, // Trigger when 15% of the element is visible
+        threshold: 0.15, 
         rootMargin: "0px 0px -50px 0px" 
     };
 
@@ -47,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             } else {
                 entry.target.classList.add('active');
-                // Optional: Stop observing once revealed
                 observer.unobserve(entry.target);
             }
         });
