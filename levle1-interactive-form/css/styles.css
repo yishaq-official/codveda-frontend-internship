@@ -113,3 +113,13 @@ body {
     outline: none;
 }
 
+/* Focus Effects */
+.form-control input:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+.form-control input:focus + i {
+    color: var(--primary-green);
+}
+
