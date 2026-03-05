@@ -243,3 +243,52 @@ img {
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--bg-white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: var(--transition-fast);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: #e8f5e9;
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    transition: var(--transition-fast);
+}
+
+.feature-card:hover .icon-wrapper {
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
