@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         
-        mobileMenu.classList.toggle('is-active');
+        mobileMenu.classList.toggle('active');
+
+        const expanded = mobileMenu.getAttribute('aria-expanded') === 'true' || false;
+        mobileMenu.setAttribute('aria-expanded', !expanded);
     });
     navLinksItems.forEach(item => {
         item.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            mobileMenu.classList.remove('is-active');
+            mobileMenu.classList.remove('active');
         });
     });
 
