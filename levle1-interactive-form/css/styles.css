@@ -17,3 +17,99 @@
     --transition-speed: 0.3s;
 }
 
+/* ==========================================
+   Reset & Base Styles
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light-gray);
+    color: var(--text-dark);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================================
+   Layout & Container
+   ========================================== */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    background-color: var(--bg-white);
+    width: 90%; /* Mobile First Width */
+    max-width: 420px;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   Form Controls & Inputs
+   ========================================== */
+.form-control {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    transition: color var(--transition-speed);
+}
+
+.form-control input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* Padding left leaves room for icon */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    outline: none;
+}
+
