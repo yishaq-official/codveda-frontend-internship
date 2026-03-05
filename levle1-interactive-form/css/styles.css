@@ -1,0 +1,19 @@
+/* ==========================================
+   CSS Variables & Design System
+   ========================================== */
+:root {
+    --primary-green: #2E7D32;
+    --secondary-orange: #FF8F00;
+    --bg-white: #FFFFFF;
+    --bg-light-gray: #F5F5F5;
+    --text-dark: #222222;
+    --text-muted: #666666;
+    --error-red: #e53935;
+    --border-color: #cccccc;
+    --focus-shadow: rgba(46, 125, 50, 0.2);
+    --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    
+    --font-family: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+}
+
