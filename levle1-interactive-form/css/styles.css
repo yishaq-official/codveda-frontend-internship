@@ -145,3 +145,89 @@ body {
     display: block;
 }
 
+/* ==========================================
+   Password Strength Meter
+   ========================================== */
+.strength-meter {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    height: 4px;
+}
+
+.meter-bar {
+    flex: 1;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    transition: background-color var(--transition-speed);
+}
+
+.strength-text {
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+    font-weight: 500;
+}
+
+/* ==========================================
+   Button
+   ========================================== */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color var(--transition-speed), transform 0.1s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-orange);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   Success Toast
+   ========================================== */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 601px) {
+    .form-card {
+        padding: 40px;
+    }
+    .form-header h2 {
+        font-size: 1.8rem;
+    }
+}
