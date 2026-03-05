@@ -459,20 +459,20 @@ img {
    Animations
    ========================================== */
 .reveal {
-    opacity: 0;
+    opacity: 1;
     transition: all var(--transition-slow);
 }
 
 .fade-up {
-    transform: translateY(40px);
+    transform: translateY(0);
 }
 
 .fade-left {
-    transform: translateX(-40px);
+    transform: translateX(0);
 }
 
 .fade-right {
-    transform: translateX(40px);
+    transform: translateX(0);
 }
 
 .reveal.active {
